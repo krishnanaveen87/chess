@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+ table.chessboard {
+    margin: 80px auto;
+    background: #999;
+    border: 25px solid #333;
+    border-collapse: collapse; /* */
+}
+td.chessboard {
+    width: 70px; height: 70px;
+    border: 2px solid #333; /* */
+}
+tr.chessboard:nth-child(odd) td.chessboard:nth-child(even),tr.chessboard:nth-child(even) td.chessboard:nth-child(odd) {
+    background: white;
+}
+  </style>
+
+
+
+</head>
+<body>
+
+
+ <table class="chessboard" onclick="chessClik()" id="tableBody">
+<tr class="chessboard">
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+</tr>
+<tr class="chessboard">
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+</tr>
+<tr class="chessboard">
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+</tr>
+<tr class="chessboard">
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+</tr>
+<tr class="chessboard">
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+</tr>
+<tr class="chessboard">
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+</tr>
+<tr class="chessboard">
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+</tr>
+<tr class="chessboard">
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+    <td class="chessboard"></td>
+</tr>
+</table>
+
+  <script>
+  function chessClik()
+  {
+ //  let table = document.body.firstElementChild;
+	let table = document.getElementById("tableBody");
+	 var hilite;
+    for (let i = 0; i < table.rows.length; i++) {
+      let row = table.rows[i];
+     let rowStyle =  row.cells[i].style.backgroundColor = 'red'; 
+	  }
+  }
+  /* its just selecting only horizontal row only   {
+   var hilite;  
+ var table = document.getElementById('tableBody');
+ for (var i=0;i < table.rows.length;i++){
+  table.rows[i].onclick= function () {
+   if(!this.hilite){
+    unhighlight();
+    this.origColor=this.style.backgroundColor;
+    this.style.backgroundColor='#fdee9a';
+    this.hilite = true;
+   }
+   else{
+    this.style.backgroundColor=this.origColor;
+    this.hilite = false;
+   }
+    }
+ }
+}
+
+function unhighlight(){
+  var hilite;
+ var table = document.getElementById('tableBody');
+ for (var i=0;i < table.rows.length;i++){
+   let row = table.rows[i];
+   row.style.backgroundColor=this.origColor;
+   row.hilite = false;
+ }
+}
+	
+	window.onload = chessClik();*/
+  </script>
+</body>
+</html>
